@@ -1,6 +1,6 @@
 package SortCase;
 
-public class HeapSort implements SortCase {
+public class ArraysSortInterface implements SortCaseInterface {
     @Override
     public void sortExecute() {
 

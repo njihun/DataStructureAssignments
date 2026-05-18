@@ -1,6 +1,6 @@
 package SortCase;
 
-public class RecursiveQuickSortMedianOfThreePivot implements SortCase {
+public class BubbleSortInterface implements SortCaseInterface {
     @Override
     public void sortExecute() {
 
