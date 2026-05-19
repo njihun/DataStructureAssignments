@@ -1,6 +1,6 @@
 package SortCase;
 
-public class BubbleSortInterface implements SortCaseInterface {
+public class BubbleSort implements SortCaseInterface {
     @Override
     public void sortExecute(Comparable[] array) {
         int size = array.length;

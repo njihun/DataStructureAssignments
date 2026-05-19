@@ -1,6 +1,6 @@
 package SortCase;
 
-public class SelectionSortInterface implements SortCaseInterface {
+public class SelectionSort implements SortCaseInterface {
     @Override
     public void sortExecute(Comparable[] array) {
         int size = array.length;

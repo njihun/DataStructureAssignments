@@ -1,6 +1,6 @@
 package SortCase;
 
-public class RecursiveQuickSortMedianOfThreePivotInterface implements SortCaseInterface {
+public class RecursiveMergeSort implements SortCaseInterface {
     @Override
     public void sortExecute(Comparable[] array) {
 

@@ -1,6 +1,6 @@
 package SortCase;
 
-public class ArraysSortInterface implements SortCaseInterface {
+public class IterativeMergeSort implements SortCaseInterface {
     @Override
     public void sortExecute(Comparable[] array) {
 

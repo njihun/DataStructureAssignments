@@ -1,6 +1,6 @@
 package SortCase;
 
-public class RecursiveQuickSortFirstValuePivotInterface implements SortCaseInterface {
+public class RecursiveQuickSortFirstValuePivot implements SortCaseInterface {
     @Override
     public void sortExecute(Comparable[] array) {
 
