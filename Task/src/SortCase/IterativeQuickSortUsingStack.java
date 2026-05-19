@@ -1,6 +1,6 @@
 package SortCase;
 
-public class IterativeQuickSortUsingStackInterface implements SortCaseInterface {
+public class IterativeQuickSortUsingStack implements SortCaseInterface {
     @Override
     public void sortExecute(Comparable[] array) {
 
