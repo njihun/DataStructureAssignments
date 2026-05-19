@@ -1,5 +1,5 @@
 package SortCase;
 
 public interface SortCaseInterface {
-    void sortExecute();
+    void sortExecute(Comparable[] array);
 }

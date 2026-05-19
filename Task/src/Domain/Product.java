@@ -1,4 +1,4 @@
 package Domain;
 
-public class Product<T extends Comparable<T>> {
+public record Product(int sales, int views, int reviews, double avgRate) {
 }
