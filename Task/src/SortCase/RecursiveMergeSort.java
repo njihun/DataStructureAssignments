@@ -3,7 +3,7 @@ package SortCase;
 public class RecursiveMergeSort implements SortCaseInterface {
 
     @Override
-    public void sortExecute(Comparable[] array) {
+    public void sort(Comparable[] array) {
         Comparable[] temp = new Comparable[array.length];
         mergeSort(array, 0, array.length - 1, temp);
     }

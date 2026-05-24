@@ -2,7 +2,7 @@ package SortCase;
 
 public class SelectionSort implements SortCaseInterface {
     @Override
-    public void sortExecute(Comparable[] array) {
+    public void sort(Comparable[] array) {
         int size = array.length;
 
         for (int index = 0; index < size; index++){

@@ -2,7 +2,7 @@ package SortCase;
 
 public class InsertionSort implements SortCaseInterface {
     @Override
-    public void sortExecute(Comparable[] array) {
+    public void sort(Comparable[] array) {
         int size = array.length;
         for (int index = 1; index < size; index++){
             for (int innerIdx = index; innerIdx > 0; innerIdx--){

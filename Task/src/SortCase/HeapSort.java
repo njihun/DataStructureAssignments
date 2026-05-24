@@ -2,7 +2,7 @@ package SortCase;
 
 public class HeapSort implements SortCaseInterface {
     @Override
-    public void sortExecute(Comparable[] array) {
+    public void sort(Comparable[] array) {
         // 파라미터로 넘어온 배열의 0번 인덱스가 비어있다고 가정
         int heapSize = array.length - 1;
         for (int index = heapSize / 2; index > 0; index--){

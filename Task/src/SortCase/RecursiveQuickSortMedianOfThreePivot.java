@@ -2,7 +2,7 @@ package SortCase;
 
 public class RecursiveQuickSortMedianOfThreePivot implements SortCaseInterface {
     @Override
-    public void sortExecute(Comparable[] array) {
+    public void sort(Comparable[] array) {
         if (array == null || array.length <= 1) {
             return;
         }

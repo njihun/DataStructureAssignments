@@ -2,7 +2,7 @@ package SortCase;
 
 public class IterativeMergeSort implements SortCaseInterface {
     @Override
-    public void sortExecute(Comparable[] array) {
+    public void sort(Comparable[] array) {
         int totalElements = array.length;
         if (totalElements <= 1) {
             return;
