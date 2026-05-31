@@ -2,7 +2,7 @@ package SortCase.DistributionSort;
 
 import SortCase.IntegerSortCaseInterface;
 
-public class RadixSort implements IntegerSortCaseInterface {
+public class MaskingAndShiftSort implements IntegerSortCaseInterface {
     @Override
     public void sort(int[] array) {
         if (array == null || array.length <= 1) {
@@ -10,29 +10,28 @@ public class RadixSort implements IntegerSortCaseInterface {
         }
 
         int max = findMax(array);
-        for (int digitPlace = 1; max / digitPlace > 0; digitPlace *= 10) {
-            sortByDigitDescending(array, digitPlace);
+        for (int shift = 0; (max >> shift) > 0; shift += 4) {
+            sortByHexDigitDescending(array, shift);
         }
     }
 
-    private void sortByDigitDescending(int[] array, int digitPlace) {
-        int[] count = new int[10];
-        int[] start = new int[10];
+    private void sortByHexDigitDescending(int[] array, int shift) {
+        int[] count = new int[16];
+        int[] start = new int[16];
         int[] temp = new int[array.length];
 
         for (int value : array) {
-            int digit = (value / digitPlace) % 10;
+            int digit = (value >> shift) & 15;
             count[digit]++;
         }
 
-        start[9] = 0;
-        for (int digit = 8; digit >= 0; digit--) {
+        start[15] = 0;
+        for (int digit = 14; digit >= 0; digit--) {
             start[digit] = start[digit + 1] + count[digit + 1];
         }
 
-        for (int index = 0; index < array.length; index++) {
-            int value = array[index];
-            int digit = (value / digitPlace) % 10;
+        for (int value : array) {
+            int digit = (value >> shift) & 15;
             temp[start[digit]] = value;
             start[digit]++;
         }
