@@ -9,7 +9,7 @@ public class SelectionSort implements SortCaseInterface {
             int minValueIndex = index;
 
             for (int innerIdx = index + 1; innerIdx < size; innerIdx++){
-                if (!SortHelper.isLess(array[index], array[innerIdx])){
+                if (SortHelper.isLess(array[innerIdx], array[minValueIndex])){
                     minValueIndex = innerIdx;
                 }
             }

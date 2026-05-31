@@ -1,26 +1,8 @@
 package App;
 
 import Domain.Product;
-import SortCase.ArraysSort;
-import SortCase.BubbleSort;
-import SortCase.CollectionSort;
-import SortCase.HeapSort;
-import SortCase.InsertionSort;
-import SortCase.IntegerSortCaseInterface;
-import SortCase.IterativeMergeSort;
-import SortCase.IterativeQuickSortUsingStack;
-import SortCase.RecursiveMergeSort;
-import SortCase.RecursiveQuickSortFirstValuePivot;
-import SortCase.RecursiveQuickSortMedianOfThreePivot;
-import SortCase.SelectionSort;
-import SortCase.SortCaseInterface;
-import SortCase.SortHelper;
-import SortCase.DistributionSort.BucketSort;
-import SortCase.DistributionSort.CountingSort;
-import SortCase.DistributionSort.MaskingAndShiftSort;
-import SortCase.DistributionSort.ModularWithDecimalSort;
-import SortCase.DistributionSort.ModularWithHexSort;
-import SortCase.DistributionSort.RadixSort;
+import SortCase.*;
+import SortCase.DistributionSort.*;
 
 import java.util.Random;
 import java.util.Scanner;
