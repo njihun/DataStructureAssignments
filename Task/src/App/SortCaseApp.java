@@ -118,7 +118,7 @@ public class SortCaseApp {
     }
 
     // 비교 정렬 실행 시간을 측정하는 메서드로, Comparable 배열 정렬 시간만 나노초로 반환함
-    private long measureSortTime(SortCaseInterface sort, Comparable[] array) {
+    private <T extends Comparable<? super T>> long measureSortTime(SortCaseInterface sort, T[] array) {
         long start = System.nanoTime();
         sort.sort(array);
         long end = System.nanoTime();
@@ -206,7 +206,7 @@ public class SortCaseApp {
     }
 
     // 비교 정렬 결과가 오름차순으로 정렬되었는지 확인하는 메서드
-    private boolean isSorted(Comparable[] array) {
+    private <T extends Comparable<? super T>> boolean isSorted(T[] array) {
         for (int index = 1; index < array.length; index++) {
             if (SortHelper.isLess(array[index], array[index - 1])) {
                 return false;
