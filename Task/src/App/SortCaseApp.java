@@ -96,6 +96,7 @@ public class SortCaseApp {
 
     // 비교 정렬을 실행하는 메서드로, 정렬 복잡도에 맞는 배열 크기를 선택해 네가지 자료형을 모두 정렬함
     private void runComparisonSort(String name, SortCaseInterface sort, boolean nSquare) {
+        //삼항 연산자를 사용하여 n제곱의 복잡도는 전용 크기를 가진 배열에 할당함
         int[] sizes = nSquare
                 ? new int[]{10000, 50000, 100000, 250000, 500000, 750000, 1000000}
                 : new int[]{1000000, 2500000, 5000000, 7500000, 10000000, 12500000, 15000000, 17500000, 20000000};
