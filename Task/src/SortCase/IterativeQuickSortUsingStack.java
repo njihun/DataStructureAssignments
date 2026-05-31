@@ -3,37 +3,6 @@ package SortCase;
 public class IterativeQuickSortUsingStack implements SortCaseInterface {
     @Override
     public void sort(Comparable[] array) {
-        if (array == null || array.length <= 1) {
-            return;
-        }
-
-        int[] startStack = new int[array.length];
-        int[] endStack = new int[array.length];
-        int top = -1;
-
-        startStack[++top] = 0;
-        endStack[top] = array.length - 1;
-
-        while (top >= 0) {
-            int start = startStack[top];
-            int end = endStack[top--];
-
-            if (start >= end) {
-                continue;
-            }
-
-            int pivotIndex = partition(array, start, end);
-
-            if (pivotIndex - 1 > start) {
-                startStack[++top] = start;
-                endStack[top] = pivotIndex - 1;
-            }
-
-            if (pivotIndex + 1 < end) {
-                startStack[++top] = pivotIndex + 1;
-                endStack[top] = end;
-            }
-        }
 
     }
 
